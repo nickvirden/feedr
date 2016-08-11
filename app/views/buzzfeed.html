@@ -1,0 +1,33 @@
+<link href="/app/css/buzzfeed.css" rel="stylesheet">
+
+<nav>
+    <div class="nav-wrapper">
+    <a href="#" class="brand-logo">Nick's Feedr</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="#/">Buzzfeed</a></li>
+            <li><a href="#/guardian">The Guardian</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container" ng-controller="BuzzfeedController">
+    <div class="row">
+        <div class="col s6 m6 l6" ng-repeat="buzz in feed | limitTo: 2">
+            <div class="card">
+                <div class="card-image">
+                    <img src="{{buzz.images.big}}">
+                    <span class="card-title" style="">{{buzz.title}}</span>
+                </div>
+                <div class="card-content">
+                    <p>{{buzz.description}}</p>
+                </div>
+                <div class="card-action">
+                    <a class="btn" href="https://www.buzzfeed.com/{{buzz.username}}/{{buzz.uri}}" target="_blank">FULL ACTION</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--<script src="/app/js/buzzfeed.js"></script>-->

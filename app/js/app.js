@@ -1,3 +1,4 @@
 /*global angular*/
 
-var tcma = angular.module('feederApp', ['ngRoute']);
+// Set Up Angular App
+var feedr = angular.module('feedrApp', ['ngRoute']);
